@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Fraction{
+    public static void main(String args[]){
+        Scanner x = new Scanner(System.in);
+        
+        System.out.print("Enter a numerator: ");
+        int n = x.nextInt();
+       
+        
+        System.out.print("Enter a denominator: ");
+        int d = x.nextInt();
+        
+        
+        if(n>d && n%d!=0){
+            int y = n/d;
+            int z = n-y*d;
+            System.out.println(n+" / "+d+
+            " is an improper fraction and its "+
+            "mixed fraction is " +y+" + "+z+ " / "+ d);
+        }
+        else if(n>d && n%d==0){
+            int output = n/d;
+            System.out.println(n+" / "+d+" is an improper fraction and it"+
+            " can be reduced to "+ output);
+        }
+        else{
+            System.out.println(n+" / "+d+" is a proper fraction");
+        }
+        System.out.println();
+    }
+}
